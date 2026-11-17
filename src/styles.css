@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root{font-family:Inter,Arial,sans-serif;color:#060326;background:#f8fbf9;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;--blue:#1b5aff;--light-blue:#75acff;--muted:#a5a5a5}
+*{box-sizing:border-box}
+body{margin:0;min-width:320px}
+button,input{font:inherit}
+button{cursor:pointer}
+.page{width:min(100%,1920px);min-height:100vh;margin:auto;display:grid;grid-template-columns:45.57% 54.43%;background:#f8fbf9;overflow:hidden}
+.intro{position:relative;min-height:1080px}
+.intro-copy{position:relative;z-index:1;padding:124px 30px 0 clamp(42px,5.32vw,102px)}
+h1{margin:0;color:#000;font-size:40px;font-weight:400;line-height:1.36;letter-spacing:-.025em}
+.intro-copy p{max-width:696px;margin:20px 0 0;color:var(--muted);font-size:20px;line-height:1.75}
+.illustration{position:absolute;left:0;bottom:0;width:min(87.2%,763px);height:auto;display:block}
+.upload-card{min-height:922px;margin:103px clamp(32px,5.32vw,102px) 55px 0;padding:25px clamp(40px,6.72vw,129px) 55px;background:#fff;border-radius:24px;display:flex;flex-direction:column;box-shadow:0 8px 30px rgba(15,38,87,.035)}
+h2{margin:0;font-size:36px;line-height:1.2;font-weight:500;letter-spacing:-.035em}
+.file-input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.drop-zone{min-height:420px;margin-top:53px;border:2px dashed #1b5aff;background:#f2faff;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 50px;cursor:pointer;text-align:center;transition:background .16s,border-color .16s,box-shadow .16s}
+.drop-zone:hover,.drop-zone.is-dragging{background:#e7f4ff;border-color:#0e48da}
+.drop-zone:focus-visible,.action:focus-visible{outline:3px solid #173dbc;outline-offset:4px}
+.upload-icon{color:var(--blue);flex:none}
+.drop-copy{max-width:500px;margin:27px 0 0;color:var(--muted);font-size:16px;line-height:2}
+.selected-file{max-width:100%;margin:18px 0 0;color:#173dbc;font-size:15px;font-weight:500;overflow-wrap:anywhere}
+.actions{display:flex;gap:29px;margin:98px 56px 0}
+.action{height:67px;min-width:0;flex:1;border:0;border-radius:8px;color:#fff;font-size:20px;font-weight:500;transition:background .16s,transform .16s}
+.action:hover{filter:brightness(.94)}
+.action:active{transform:translateY(2px)}
+.action-secondary{background:var(--light-blue)}
+.action-primary{background:var(--blue)}
+.action-message{min-height:22px;margin:14px 0 0;text-align:center;color:#475569;font-size:14px}
+.progress{position:relative;width:343px;max-width:80%;height:35px;margin:auto auto 0}
+.progress-line{position:absolute;top:14px;left:0;right:0;height:4px;background:linear-gradient(90deg,#85a7ff 87%,#dde0e7 87%);border-radius:4px}
+.progress-points{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center}
+.progress-point{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#1b5aff;color:white;font-size:16px;box-shadow:0 0 0 4px white}
+.progress-point.current{font-size:14px}
+@media(max-width:1150px){.page{grid-template-columns:43% 57%}.intro{min-height:850px}.intro-copy{padding-top:95px}h1{font-size:clamp(29px,3.2vw,40px)}.intro-copy p{font-size:17px}.upload-card{min-height:760px;margin-top:55px;margin-bottom:35px;padding:28px clamp(30px,4vw,70px) 40px}.drop-zone{min-height:340px;margin-top:40px}.actions{margin:60px 0 0}.action{font-size:17px}}
+@media(max-width:760px){.page{display:flex;flex-direction:column;overflow:visible}.intro{min-height:0;display:flex;flex-direction:column}.intro-copy{padding:48px 24px 0}h1{font-size:34px}.intro-copy p{max-width:570px;margin-top:12px;font-size:16px;line-height:1.55}.illustration{position:static;align-self:center;width:min(88%,420px);margin:18px auto -12px}.upload-card{width:calc(100% - 32px);min-height:0;margin:0 16px 32px;padding:30px 24px 36px;border-radius:20px}h2{font-size:28px}.drop-zone{min-height:260px;margin-top:26px;padding:26px 20px}.drop-copy{font-size:14px;line-height:1.6}.actions{gap:12px;margin-top:30px}.action{height:54px;font-size:16px}.progress{margin-top:35px}}
+@media(max-width:390px){.intro-copy{padding-left:18px;padding-right:18px}.upload-card{width:calc(100% - 20px);margin-left:10px;margin-right:10px;padding-left:18px;padding-right:18px}.actions{gap:9px}.action{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.drop-zone,.action{transition:none}}
